@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 
 export default function Testimonials() {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -84,11 +83,8 @@ export default function Testimonials() {
               display: "flex", alignItems: "center", gap: 12,
               paddingTop: 20, borderTop: "1px solid #A5C8C5",
             }}>
-              <Image
-                src="https://placehold.co/44x44/E8E3DB/6B6560?text=AK"
-                alt="Ayşe K." width={44} height={44}
-                style={{ borderRadius: "50%", objectFit: "cover" }}
-              />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="https://placehold.co/44x44/E8E3DB/6B6560?text=AK" alt="Ayşe K." width={44} height={44} style={{ borderRadius: "50%", objectFit: "cover" }} />
               <div>
                 <div style={{ fontSize: 14, fontWeight: 500, color: "#0F172A" }}>Ayşe K.</div>
                 <div style={{ fontSize: 12, color: "#475569" }}>İstanbul</div>
@@ -122,11 +118,8 @@ export default function Testimonials() {
                   &ldquo;VO2 Max değerimde 12 haftada bu artışı sağladım. BioOS&apos;un egzersiz ve beslenme entegrasyonu olmadan bu mümkün olmazdı.&rdquo;
                 </p>
                 <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                  <Image
-                    src="https://placehold.co/32x32/E8E3DB/6B6560?text=MT"
-                    alt="Mert T." width={32} height={32}
-                    style={{ borderRadius: "50%" }}
-                  />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="https://placehold.co/32x32/E8E3DB/6B6560?text=MT" alt="Mert T." width={32} height={32} style={{ borderRadius: "50%" }} />
                   <div>
                     <div style={{ fontSize: 13, fontWeight: 500, color: "#0F172A" }}>Mert T.</div>
                     <div style={{ fontSize: 11, color: "#475569" }}>İzmir</div>
@@ -153,11 +146,8 @@ export default function Testimonials() {
                 Diyetisyen ve kişisel antrenörle çalışıyordum ama verilerim hiç bir arada değerlendirilmiyordu. BioOS her şeyi tek platforma taşıdı. Artık antrenörüme BioOS raporumu gönderiyorum, çok daha verimli çalışıyoruz.
               </p>
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                <Image
-                  src="https://placehold.co/36x36/B3EDD4/1A6E4F?text=SA"
-                  alt="Selin A." width={36} height={36}
-                  style={{ borderRadius: "50%" }}
-                />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="https://placehold.co/36x36/B3EDD4/1A6E4F?text=SA" alt="Selin A." width={36} height={36} style={{ borderRadius: "50%" }} />
                 <div>
                   <div style={{ fontSize: 13, fontWeight: 500, color: "#0F172A" }}>Selin A.</div>
                   <div style={{ fontSize: 11, color: "#064E3B" }}>Ankara</div>

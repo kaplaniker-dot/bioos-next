@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 
 const avatars = [
   { src: "https://placehold.co/28x28/0D9488/white?text=A", alt: "A" },
@@ -95,14 +94,11 @@ export default function CTA() {
         }}>
           <div style={{ display: "flex", marginRight: 4 }}>
             {avatars.map((a, i) => (
-              <Image
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
                 key={a.alt}
                 src={a.src} alt={a.alt} width={28} height={28}
-                style={{
-                  borderRadius: "50%",
-                  border: "2px solid white",
-                  marginLeft: i === 0 ? 0 : -6,
-                }}
+                style={{ borderRadius: "50%", border: "2px solid white", marginLeft: i === 0 ? 0 : -6 }}
               />
             ))}
           </div>
