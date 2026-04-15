@@ -14,67 +14,18 @@ export async function POST(req: NextRequest) {
 
   const systemPrompt = `Sen Türkiye'de çalışan uzman bir diyetisyen ve sporcu beslenmesi uzmanısın. Türk mutfağını, TÜBER beslenme rehberini ve Türkiye'deki yaygın eksiklikleri (D vitamini, B12, demir, magnezyum) biliyorsun. Yanıtını her zaman geçerli JSON formatında ver, başka metin ekleme. Türkçe yanıt ver.`;
 
-  const userMessage = `Aşağıdaki verilere dayanarak bu kişi için kapsamlı bir beslenme değerlendirmesi ve kişisel plan oluştur.
+  const userMessage = `Beslenme raporu oluştur. Hedef: ${hedef}
 
-Ölçüm verileri:
-${JSON.stringify(olcumler, null, 2)}
+Ölçümler: ${JSON.stringify(olcumler)}
+Analiz: ${JSON.stringify(analizSonucu)}
+Anamnez: ${JSON.stringify(anamnezCevaplari)}
 
-Ölçüm analiz sonucu:
-${JSON.stringify(analizSonucu, null, 2)}
-
-Anamnez cevapları:
-${JSON.stringify(anamnezCevaplari, null, 2)}
-
-Kullanıcı hedefi: ${hedef}
-
-Yanıtını SADECE şu JSON formatında ver:
-{
-  "kisiBilgisi": {
-    "ozet": "2-3 cümle kişi profili özeti",
-    "gucluYonler": ["madde1", "madde2"],
-    "riskler": ["madde1", "madde2"],
-    "oncelikliMudahale": ["madde1", "madde2", "madde3"]
-  },
-  "enerjiHedefi": {
-    "bmr": 0,
-    "tdee": 0,
-    "gunlukKalori": 0,
-    "aciklama": "hesaplama ve hedef açıklaması"
-  },
-  "makroDagilimi": {
-    "protein": { "gram": 0, "yuzde": 0, "aciklama": "neden bu kadar" },
-    "karbonhidrat": { "gram": 0, "yuzde": 0, "aciklama": "neden bu kadar" },
-    "yag": { "gram": 0, "yuzde": 0, "aciklama": "neden bu kadar" }
-  },
-  "kritikMikroBesinler": [
-    {
-      "ad": "vitamin/mineral adı",
-      "oncelik": "yuksek|orta|dusuk",
-      "neden": "neden önemli, mevcut durumu",
-      "gunlukHedef": "mg/mcg/IU miktarı",
-      "kaynaklar": ["besin1", "besin2", "besin3"],
-      "takviyeOneri": "gerekiyorsa takviye önerisi"
-    }
-  ],
-  "kacinilacakBesinler": [
-    {
-      "besin": "besin adı",
-      "neden": "kişiye özel neden"
-    }
-  ],
-  "turkMutfagiOnerileri": [
-    {
-      "yemek": "yemek adı",
-      "neden": "neden önerildiği",
-      "sıklık": "haftada kaç kez"
-    }
-  ],
-  "pratikIpuclari": ["ipucu1", "ipucu2", "ipucu3", "ipucu4", "ipucu5"]
-}`;
+YALNIZCA bu JSON'u döndür, kısa tut (her string max 80 karakter, her array max 3 eleman):
+{"kisiBilgisi":{"ozet":"string","gucluYonler":["a","b"],"riskler":["a","b"],"oncelikliMudahale":["a","b","c"]},"enerjiHedefi":{"bmr":0,"tdee":0,"gunlukKalori":0,"aciklama":"string"},"makroDagilimi":{"protein":{"gram":0,"yuzde":0,"aciklama":"string"},"karbonhidrat":{"gram":0,"yuzde":0,"aciklama":"string"},"yag":{"gram":0,"yuzde":0,"aciklama":"string"}},"kritikMikroBesinler":[{"ad":"string","oncelik":"yuksek","neden":"string","gunlukHedef":"string","kaynaklar":["a","b"],"takviyeOneri":"string"}],"kacinilacakBesinler":[{"besin":"string","neden":"string"}],"turkMutfagiOnerileri":[{"yemek":"string","neden":"string","sıklık":"string"}],"pratikIpuclari":["a","b","c"]}`;
 
   const message = await client.messages.create({
     model: "claude-haiku-4-5-20251001",
-    max_tokens: 4000,
+    max_tokens: 2000,
     messages: [{ role: "user", content: userMessage }],
     system: systemPrompt,
   });
