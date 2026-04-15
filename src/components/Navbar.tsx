@@ -3,12 +3,14 @@
 import { useEffect, useRef, useState } from "react";
 import { useModal } from "@/context/ModalContext";
 import { usePostHog } from "@/components/PostHogProvider";
+import { useAuth, UserButton } from "@clerk/nextjs";
 
 export default function Navbar() {
   const navRef = useRef<HTMLElement>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const { open } = useModal();
   const ph = usePostHog();
+  const { isSignedIn } = useAuth();
 
   useEffect(() => {
     const nav = navRef.current;
@@ -89,13 +91,27 @@ export default function Navbar() {
               {label}
             </a>
           ))}
-          <button
-            onClick={() => { ph?.capture("cta_clicked", { location: "navbar" }); open(); }}
-            className="btn-primary"
-            style={{ fontSize: 14, padding: "10px 20px" }}
-          >
-            Ücretsiz Başla
-          </button>
+          {isSignedIn ? (
+            <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+              <a href="/dashboard" className="btn-outline" style={{ fontSize: 14, padding: "10px 20px" }}>
+                Dashboard
+              </a>
+              <UserButton />
+            </div>
+          ) : (
+            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+              <a href="/sign-in" style={{ fontSize: 14, fontWeight: 500, color: "#334155", textDecoration: "none" }}>
+                Giriş Yap
+              </a>
+              <button
+                onClick={() => { ph?.capture("cta_clicked", { location: "navbar" }); open(); }}
+                className="btn-primary"
+                style={{ fontSize: 14, padding: "10px 20px" }}
+              >
+                Ücretsiz Başla
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Mobile hamburger */}

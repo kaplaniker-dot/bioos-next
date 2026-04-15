@@ -4,6 +4,7 @@ import "./globals.css";
 import { ModalProvider } from "@/context/ModalContext";
 import WaitlistModal from "@/components/WaitlistModal";
 import PostHogProvider from "@/components/PostHogProvider";
+import { ClerkProvider } from "@clerk/nextjs";
 import { Suspense } from "react";
 
 const cormorant = Cormorant_Garamond({
@@ -92,14 +93,16 @@ export default function RootLayout({
       className={`${cormorant.variable} ${dmSans.variable} ${dmMono.variable} h-full`}
     >
       <body className="min-h-full flex flex-col antialiased">
-        <Suspense>
-          <PostHogProvider>
-            <ModalProvider>
-              {children}
-              <WaitlistModal />
-            </ModalProvider>
-          </PostHogProvider>
-        </Suspense>
+        <ClerkProvider>
+          <Suspense>
+            <PostHogProvider>
+              <ModalProvider>
+                {children}
+                <WaitlistModal />
+              </ModalProvider>
+            </PostHogProvider>
+          </Suspense>
+        </ClerkProvider>
       </body>
     </html>
   );
