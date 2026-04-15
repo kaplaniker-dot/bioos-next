@@ -2,6 +2,8 @@ import { auth } from "@clerk/nextjs/server";
 import { NextRequest, NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
 
+export const maxDuration = 60;
+
 function extractJSON(text: string): unknown {
   // Önce ```json ... ``` bloğunu dene
   const codeBlock = text.match(/```(?:json)?\s*([\s\S]*?)```/);

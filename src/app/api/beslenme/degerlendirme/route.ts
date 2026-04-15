@@ -1,16 +1,7 @@
 import { auth } from "@clerk/nextjs/server";
 import { NextRequest, NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
-import { readFileSync } from "fs";
-import { join } from "path";
-
-function loadKnowledge(file: string): string {
-  try {
-    return readFileSync(join(process.cwd(), "data/knowledge", file), "utf-8");
-  } catch {
-    return "";
-  }
-}
+export const maxDuration = 60;
 
 export async function POST(req: NextRequest) {
   const { userId } = await auth();
@@ -19,22 +10,9 @@ export async function POST(req: NextRequest) {
   const body = await req.json();
   const { olcumler, analizSonucu, anamnezCevaplari, hedef } = body;
 
-  const tuber = loadKnowledge("tuber-rehberi.txt");
-  const besinTablosu = loadKnowledge("besin-tablosu.txt");
-  const eksiklikler = loadKnowledge("eksiklikler.txt");
-
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
-  const systemPrompt = `Sen Türkiye'de çalışan uzman bir diyetisyen ve sporcu beslenmesi uzmanısın. Türk mutfağını, Türkiye'deki yaygın besin eksikliklerini ve TÜBER beslenme rehberini biliyorsun. Türkçe yanıt ver.
-
-TÜBER Referans Değerleri:
-${tuber}
-
-Türkiye Besin Tablosu:
-${besinTablosu}
-
-Türkiye'de Yaygın Eksiklikler:
-${eksiklikler}`;
+  const systemPrompt = `Sen Türkiye'de çalışan uzman bir diyetisyen ve sporcu beslenmesi uzmanısın. Türk mutfağını, TÜBER beslenme rehberini ve Türkiye'deki yaygın eksiklikleri (D vitamini, B12, demir, magnezyum) biliyorsun. Yanıtını her zaman geçerli JSON formatında ver, başka metin ekleme. Türkçe yanıt ver.`;
 
   const userMessage = `Aşağıdaki verilere dayanarak bu kişi için kapsamlı bir beslenme değerlendirmesi ve kişisel plan oluştur.
 
@@ -95,8 +73,8 @@ Yanıtını SADECE şu JSON formatında ver:
 }`;
 
   const message = await client.messages.create({
-    model: "claude-opus-4-5",
-    max_tokens: 6000,
+    model: "claude-haiku-4-5-20251001",
+    max_tokens: 4000,
     messages: [{ role: "user", content: userMessage }],
     system: systemPrompt,
   });
