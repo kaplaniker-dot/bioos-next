@@ -68,10 +68,12 @@ Yanıtını SADECE şu JSON formatında ver (başka hiçbir şey yazma):
   }
 
   try {
-    const jsonMatch = content.text.match(/\{[\s\S]*\}/);
-    const parsed = JSON.parse(jsonMatch ? jsonMatch[0] : content.text);
+    const codeBlock = content.text.match(/```(?:json)?\s*([\s\S]*?)```/);
+    const jsonStr = codeBlock ? codeBlock[1].trim() : content.text.match(/\{[\s\S]*\}/)?.[0] || content.text;
+    const parsed = JSON.parse(jsonStr);
     return NextResponse.json(parsed);
-  } catch {
-    return NextResponse.json({ error: "Yanıt işlenemedi", raw: content.text }, { status: 500 });
+  } catch (err) {
+    console.error("Analiz API error:", err);
+    return NextResponse.json({ error: "Yanıt işlenemedi", detail: String(err) }, { status: 500 });
   }
 }
