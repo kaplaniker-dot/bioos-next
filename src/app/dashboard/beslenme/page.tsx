@@ -315,9 +315,30 @@ export default function BeslenmePage() {
 
         {/* Hata mesajı */}
         {hata && (
-          <div style={{ background: "#FEF2F2", border: "1px solid #FCA5A5", borderRadius: 10, padding: "14px 18px", marginBottom: 20, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <div style={{ background: "#FEF2F2", border: "1px solid #FCA5A5", borderLeft: "4px solid #EF4444", borderRadius: "0 10px 10px 0", padding: "14px 18px", marginBottom: 20, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
             <span style={{ fontSize: 14, color: "#991B1B" }}>⚠ {hata}</span>
             <button onClick={() => setHata(null)} style={{ background: "none", border: "none", color: "#991B1B", cursor: "pointer", fontSize: 16 }}>✕</button>
+          </div>
+        )}
+
+        {/* Loading skeleton */}
+        {yukleniyor && (
+          <div style={{ background: "#FFFFFF", border: "1px solid #A5C8C5", borderRadius: 14, padding: 32, marginBottom: 20 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 28 }}>
+              <div style={{ width: 40, height: 40, borderRadius: "50%", background: "#E2E8F0", animation: "pulse 1.5s ease-in-out infinite" }} />
+              <div>
+                <div style={{ width: 180, height: 14, background: "#E2E8F0", borderRadius: 6, marginBottom: 8, animation: "pulse 1.5s ease-in-out infinite" }} />
+                <div style={{ width: 120, height: 10, background: "#F1F5F9", borderRadius: 6, animation: "pulse 1.5s ease-in-out infinite 0.2s" }} />
+              </div>
+            </div>
+            {[1, 2, 3].map(i => (
+              <div key={i} style={{ height: 12, background: "#F1F5F9", borderRadius: 6, marginBottom: 10, width: i === 3 ? "60%" : "100%", animation: `pulse 1.5s ease-in-out infinite ${i * 0.15}s` }} />
+            ))}
+            <div style={{ marginTop: 20, textAlign: "center" }}>
+              <span style={{ fontSize: 13, color: "#94A3B8", animation: "pulse 1.5s ease-in-out infinite", display: "inline-block" }}>
+                AI analiz yapıyor...
+              </span>
+            </div>
           </div>
         )}
 
@@ -519,8 +540,10 @@ export default function BeslenmePage() {
       </div>
 
       <style>{`
-        @keyframes spin {
-          to { transform: rotate(360deg); }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        @keyframes pulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.4; }
         }
         input:focus, select:focus {
           border-color: #0D9488 !important;
