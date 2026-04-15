@@ -54,7 +54,7 @@ export default function Footer() {
         {/* Bottom row */}
         <div style={{ borderTop: "1px solid #A5C8C5", paddingTop: 24 }}>
           <p style={{ fontSize: 12, color: "#94A3B8", margin: 0 }}>
-            © 2026 BioOS · Yüksek Performans Mimarı İlker · Melbourne
+            © 2026 BioOS. Tüm hakları saklıdır.
           </p>
         </div>
       </div>

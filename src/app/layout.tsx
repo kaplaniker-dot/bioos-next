@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, DM_Sans, DM_Mono } from "next/font/google";
 import "./globals.css";
+import { ModalProvider } from "@/context/ModalContext";
+import WaitlistModal from "@/components/WaitlistModal";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -39,7 +41,12 @@ export default function RootLayout({
       lang="tr"
       className={`${cormorant.variable} ${dmSans.variable} ${dmMono.variable} h-full`}
     >
-      <body className="min-h-full flex flex-col antialiased">{children}</body>
+      <body className="min-h-full flex flex-col antialiased">
+          <ModalProvider>
+            {children}
+            <WaitlistModal />
+          </ModalProvider>
+        </body>
     </html>
   );
 }

@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useModal } from "@/context/ModalContext";
 
 export default function Navbar() {
   const navRef = useRef<HTMLElement>(null);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { open } = useModal();
 
   useEffect(() => {
     const nav = navRef.current;
@@ -85,13 +87,13 @@ export default function Navbar() {
               {label}
             </a>
           ))}
-          <a
-            href="#"
+          <button
+            onClick={open}
             className="btn-primary"
             style={{ fontSize: 14, padding: "10px 20px" }}
           >
             Ücretsiz Başla
-          </a>
+          </button>
         </div>
 
         {/* Mobile hamburger */}

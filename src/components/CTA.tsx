@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { useModal } from "@/context/ModalContext";
 
 const avatars = [
   { src: "https://placehold.co/28x28/0D9488/white?text=A", alt: "A" },
@@ -17,6 +18,7 @@ const trustBadges = [
 
 export default function CTA() {
   const contentRef = useRef<HTMLDivElement>(null);
+  const { open } = useModal();
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -110,8 +112,8 @@ export default function CTA() {
         </div>
 
         <div style={{ marginBottom: 28 }}>
-          <a
-            href="#"
+          <button
+            onClick={open}
             className="btn-primary"
             style={{
               fontSize: 17, padding: "16px 36px",
@@ -119,7 +121,7 @@ export default function CTA() {
             }}
           >
             Ücretsiz Hesap Oluştur →
-          </a>
+          </button>
         </div>
 
         {/* Trust badges */}
