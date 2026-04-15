@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { useModal } from "@/context/ModalContext";
+import { usePostHog } from "@/components/PostHogProvider";
 
 type State = "idle" | "loading" | "success" | "exists" | "error";
 
@@ -12,6 +13,7 @@ export default function WaitlistModal() {
   const [errorMsg, setErrorMsg] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
   const backdropRef = useRef<HTMLDivElement>(null);
+  const ph = usePostHog();
 
   // Focus input when modal opens
   useEffect(() => {
@@ -38,7 +40,7 @@ export default function WaitlistModal() {
     return () => { document.body.style.overflow = ""; };
   }, [isOpen]);
 
-  async function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
     e.preventDefault();
     if (!email.trim()) return;
     setState("loading");
@@ -55,14 +57,18 @@ export default function WaitlistModal() {
       if (!res.ok) {
         setErrorMsg(data.error || "Bir hata oluştu.");
         setState("error");
+        ph?.capture("waitlist_error", { reason: data.error });
       } else if (data.message === "already_exists") {
         setState("exists");
+        ph?.capture("waitlist_duplicate");
       } else {
         setState("success");
+        ph?.capture("waitlist_submitted");
       }
     } catch {
       setErrorMsg("Bağlantı hatası. Lütfen tekrar dene.");
       setState("error");
+      ph?.capture("waitlist_error", { reason: "network" });
     }
   }
 

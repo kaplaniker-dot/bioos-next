@@ -2,11 +2,13 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useModal } from "@/context/ModalContext";
+import { usePostHog } from "@/components/PostHogProvider";
 
 export default function Navbar() {
   const navRef = useRef<HTMLElement>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const { open } = useModal();
+  const ph = usePostHog();
 
   useEffect(() => {
     const nav = navRef.current;
@@ -88,7 +90,7 @@ export default function Navbar() {
             </a>
           ))}
           <button
-            onClick={open}
+            onClick={() => { ph?.capture("cta_clicked", { location: "navbar" }); open(); }}
             className="btn-primary"
             style={{ fontSize: 14, padding: "10px 20px" }}
           >

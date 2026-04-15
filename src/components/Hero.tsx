@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { useModal } from "@/context/ModalContext";
+import { usePostHog } from "@/components/PostHogProvider";
 import {
   Chart as ChartJS,
   LineElement,
@@ -82,6 +83,7 @@ const heroStats = [
 export default function Hero() {
   const mockupRef = useRef<HTMLDivElement>(null);
   const { open } = useModal();
+  const ph = usePostHog();
 
   const handleMouseOver = () => {
     if (!mockupRef.current) return;
@@ -281,7 +283,7 @@ export default function Hero() {
             <p style={{ fontSize: 18, fontWeight: 500, color: "#334155", lineHeight: 1.7, maxWidth: 480, margin: "0 0 32px" }}>
               Kan tahlilinden beslenme planına, egzersizden uzun ömre — yapay zeka ile kişiselleştirilmiş sağlık optimizasyonu. Tüm veriler birbiriyle konuşur.
             </p>
-            <button onClick={open} className="btn-primary">Ücretsiz Hesap Oluştur →</button>
+            <button onClick={() => { ph?.capture("cta_clicked", { location: "hero" }); open(); }} className="btn-primary">Ücretsiz Hesap Oluştur →</button>
           </div>
 
           <div style={{ paddingTop: 6 }}>

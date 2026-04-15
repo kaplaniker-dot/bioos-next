@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { useModal } from "@/context/ModalContext";
+import { usePostHog } from "@/components/PostHogProvider";
 
 const avatars = [
   { src: "https://placehold.co/28x28/0D9488/white?text=A", alt: "A" },
@@ -19,6 +20,7 @@ const trustBadges = [
 export default function CTA() {
   const contentRef = useRef<HTMLDivElement>(null);
   const { open } = useModal();
+  const ph = usePostHog();
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -113,7 +115,7 @@ export default function CTA() {
 
         <div style={{ marginBottom: 28 }}>
           <button
-            onClick={open}
+            onClick={() => { ph?.capture("cta_clicked", { location: "cta_section" }); open(); }}
             className="btn-primary"
             style={{
               fontSize: 17, padding: "16px 36px",
