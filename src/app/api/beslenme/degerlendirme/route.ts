@@ -46,7 +46,7 @@ Yanıtını SADECE şu JSON formatında ver:
     "karbonhidrat": { "gram": 0, "yuzde": 0, "aciklama": "neden bu kadar" },
     "yag": { "gram": 0, "yuzde": 0, "aciklama": "neden bu kadar" }
   },
-  "kritikMikroBesинler": [
+  "kritikMikroBesinler": [
     {
       "ad": "vitamin/mineral adı",
       "oncelik": "yuksek|orta|dusuk",

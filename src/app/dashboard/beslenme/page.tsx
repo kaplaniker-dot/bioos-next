@@ -186,6 +186,7 @@ export default function BeslenmePage() {
     kalkaCevresi: "", gogusСevresi: "", aktiviteSeviyesi: "",
   });
   const [yukleniyor, setYukleniyor] = useState(false);
+  const [hata, setHata] = useState<string | null>(null);
   const [analizSonucu, setAnalizSonucu] = useState<Record<string, unknown> | null>(null);
   const [anamnezFormu, setAnamnezFormu] = useState<Record<string, unknown> | null>(null);
   const [finalRapor, setFinalRapor] = useState<Record<string, unknown> | null>(null);
@@ -193,6 +194,7 @@ export default function BeslenmePage() {
   async function analizYap() {
     if (!hedef) return;
     setYukleniyor(true);
+    setHata(null);
     try {
       const olcumler = girisTipi === "tanita" ? { tip: "tanita", ...tanitaOlcum } : { tip: "manuel", ...manuelOlcum };
       const res = await fetch("/api/beslenme/analiz", {
@@ -201,9 +203,11 @@ export default function BeslenmePage() {
         body: JSON.stringify({ olcumler, hedef }),
       });
       const data = await res.json();
+      if (!res.ok) { setHata(data.detail || data.error || "Analiz yapılamadı. Tekrar dene."); return; }
       setAnalizSonucu(data);
       setAdim(2);
     } catch (e) {
+      setHata("Bağlantı hatası. Tekrar dene.");
       console.error(e);
     } finally {
       setYukleniyor(false);
@@ -212,6 +216,7 @@ export default function BeslenmePage() {
 
   async function anamnezOlustur() {
     setYukleniyor(true);
+    setHata(null);
     try {
       const res = await fetch("/api/beslenme/anamnez", {
         method: "POST",
@@ -219,9 +224,12 @@ export default function BeslenmePage() {
         body: JSON.stringify({ analizSonucu, hedef }),
       });
       const data = await res.json();
+      if (!res.ok) { setHata(data.detail || data.error || "Form oluşturulamadı. Tekrar dene."); return; }
+      if (!data.kategoriler || data.kategoriler.length === 0) { setHata("Form verisi boş geldi. Tekrar dene."); return; }
       setAnamnezFormu(data);
       setAdim(3);
     } catch (e) {
+      setHata("Bağlantı hatası. Tekrar dene.");
       console.error(e);
     } finally {
       setYukleniyor(false);
@@ -230,6 +238,7 @@ export default function BeslenmePage() {
 
   async function finalDegerlendirme(cevaplar: Record<string, string>) {
     setYukleniyor(true);
+    setHata(null);
     try {
       const olcumler = girisTipi === "tanita" ? { tip: "tanita", ...tanitaOlcum } : { tip: "manuel", ...manuelOlcum };
       const res = await fetch("/api/beslenme/degerlendirme", {
@@ -238,9 +247,11 @@ export default function BeslenmePage() {
         body: JSON.stringify({ olcumler, analizSonucu, anamnezCevaplari: cevaplar, hedef }),
       });
       const data = await res.json();
+      if (!res.ok) { setHata(data.detail || data.error || "Rapor oluşturulamadı. Tekrar dene."); return; }
       setFinalRapor(data);
       setAdim(4);
     } catch (e) {
+      setHata("Bağlantı hatası. Tekrar dene.");
       console.error(e);
     } finally {
       setYukleniyor(false);
@@ -301,6 +312,14 @@ export default function BeslenmePage() {
         </div>
 
         <AdimGostergesi aktif={adim} />
+
+        {/* Hata mesajı */}
+        {hata && (
+          <div style={{ background: "#FEF2F2", border: "1px solid #FCA5A5", borderRadius: 10, padding: "14px 18px", marginBottom: 20, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+            <span style={{ fontSize: 14, color: "#991B1B" }}>⚠ {hata}</span>
+            <button onClick={() => setHata(null)} style={{ background: "none", border: "none", color: "#991B1B", cursor: "pointer", fontSize: 16 }}>✕</button>
+          </div>
+        )}
 
         {/* ADIM 1 */}
         {adim === 1 && (
