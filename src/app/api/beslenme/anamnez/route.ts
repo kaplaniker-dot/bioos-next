@@ -25,24 +25,23 @@ export async function POST(req: NextRequest) {
 
   const systemPrompt = `Sen Türkiye'de çalışan uzman bir diyetisyen ve sporcu beslenmesi uzmanısın. Klinik beslenme anamnezi konusunda deneyimlisin. Yanıtını her zaman geçerli JSON formatında ver, başka hiçbir metin ekleme.`;
 
-  const userMessage = `Aşağıdaki ölçüm analiz sonuçlarına göre kişiye özel beslenme anamnez formu oluştur.
+  const userMessage = `Beslenme anamnez formu oluştur. Kullanıcı hedefi: ${hedef}
 
-Analiz sonucu:
-${JSON.stringify(analizSonucu, null, 2)}
+Riskli alanlar: ${JSON.stringify((analizSonucu as {oncelikliMudahale?: string[]})?.oncelikliMudahale || [])}
 
-Kullanıcı hedefi: ${hedef}
+TAM OLARAK 5 kategori, her kategoride TAM OLARAK 3 soru. Toplam 15 soru.
 
-Kategoriler: beslenme alışkanlıkları, sindirim sistemi, uyku, stres, su tüketimi, takviye kullanımı, geçmiş hastalıklar, ilaç kullanımı, besin alerjileri, günlük rutin. Riskli alanlara göre ek sorular ekle.
+Kategoriler: Beslenme Alışkanlıkları, Sindirim ve Uyku, Su ve Takviye, Sağlık Geçmişi, Günlük Rutin
 
-Yanıtını YALNIZCA bu JSON formatında ver, markdown veya açıklama ekleme:
-{"kategoriler":[{"baslik":"string","sorular":[{"id":"string","soru":"string","tip":"text|radio|checkbox|number|select","secenekler":[],"zorunlu":true}]}]}
+YALNIZCA geçerli JSON döndür:
+{"kategoriler":[{"baslik":"string","sorular":[{"id":"k1s1","soru":"string","tip":"radio","secenekler":["A","B","C"],"zorunlu":true}]}]}
 
-Her kategoride 3-5 soru olsun. text ve number tipinde secenekler boş dizi [] olsun.`;
+Kurallar: id benzersiz olsun (k1s1, k1s2 gibi), text/number tipinde secenekler:[] olsun, her kategoride tam 3 soru olsun.`;
 
   try {
     const message = await client.messages.create({
       model: "claude-haiku-4-5-20251001",
-      max_tokens: 4000,
+      max_tokens: 2000,
       messages: [{ role: "user", content: userMessage }],
       system: systemPrompt,
     });
