@@ -102,6 +102,47 @@ export default async function DashboardPage() {
           ))}
         </div>
 
+        {/* Modül kartları */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 16, marginBottom: 24 }}>
+          {/* Beslenme Modülü */}
+          <a href="/dashboard/beslenme" style={{ textDecoration: "none" }}>
+            <div style={{
+              background: "linear-gradient(135deg, #CCFBF1 0%, #E0F2FE 100%)",
+              border: "1px solid #A5C8C5", borderRadius: 16,
+              padding: "28px 28px", cursor: "pointer",
+              transition: "transform 0.2s, box-shadow 0.2s",
+            }}
+              onMouseOver={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(-2px)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 24px rgba(13,148,136,0.15)"; }}
+              onMouseOut={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; }}
+            >
+              <div style={{ fontSize: 28, marginBottom: 12 }}>🥗</div>
+              <h2 style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontWeight: 400, fontSize: 22, color: "#0F172A", margin: "0 0 8px", letterSpacing: "-0.3px" }}>
+                Beslenme Modülü
+              </h2>
+              <p style={{ fontSize: 13, color: "#475569", margin: "0 0 16px", lineHeight: 1.6 }}>
+                Vücut ölçümlerini gir, yapay zeka ile kişisel beslenme planını al. Diyet takibi yap.
+              </p>
+              <span style={{ fontSize: 13, fontWeight: 700, color: "#0F766E" }}>Başla →</span>
+            </div>
+          </a>
+
+          {/* Kan Tahlili — yakında */}
+          <div style={{
+            background: "#F8FAFC",
+            border: "1px dashed #CBD5E1", borderRadius: 16,
+            padding: "28px 28px",
+          }}>
+            <div style={{ fontSize: 28, marginBottom: 12, opacity: 0.5 }}>🩸</div>
+            <h2 style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontWeight: 400, fontSize: 22, color: "#94A3B8", margin: "0 0 8px", letterSpacing: "-0.3px" }}>
+              Kan Tahlili Analizi
+            </h2>
+            <p style={{ fontSize: 13, color: "#94A3B8", margin: "0 0 16px", lineHeight: 1.6 }}>
+              PDF olarak yükle, biyobelirteçlerini yapay zeka ile analiz et.
+            </p>
+            <span style={{ fontSize: 12, fontWeight: 600, color: "#94A3B8", background: "#E2E8F0", padding: "4px 10px", borderRadius: 999 }}>Yakında</span>
+          </div>
+        </div>
+
         {/* Upload CTA */}
         <div style={{
           background: "linear-gradient(135deg, #E0F2FE 0%, #CCFBF1 100%)",

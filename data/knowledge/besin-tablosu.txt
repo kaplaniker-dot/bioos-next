@@ -1,0 +1,120 @@
+# Türkiye'ye Özgü Gıda Besin Değerleri Tablosu
+# Kaynak: TBVT (Türkiye Beslenme Veri Tabanı) referans değerleri
+# Her 100g için: Kalori (kcal) | Protein (g) | Karbonhidrat (g) | Yağ (g) | Lif (g)
+
+## ET VE KÜMES HAYVANLARI
+Dana kıyma (orta yağlı): 250 kcal | 17g P | 0g K | 20g Y | 0g L
+Dana antrikot: 271 kcal | 26g P | 0g K | 18g Y | 0g L
+Kuzu pirzola: 294 kcal | 25g P | 0g K | 21g Y | 0g L
+Tavuk göğsü (derisiz, pişmiş): 165 kcal | 31g P | 0g K | 3.6g Y | 0g L
+Tavuk but (derisiz, pişmiş): 185 kcal | 27g P | 0g K | 8g Y | 0g L
+Hindi göğsü (pişmiş): 135 kcal | 30g P | 0g K | 1g Y | 0g L
+Sucuk (sığır): 450 kcal | 21g P | 2g K | 39g Y | 0g L
+Pastırma: 320 kcal | 31g P | 0g K | 21g Y | 0g L
+
+## BALIKLAR VE DENİZ ÜRÜNLERİ
+Hamsi (taze): 131 kcal | 20g P | 0g K | 5g Y | 0g L
+Çupra (taze): 165 kcal | 26g P | 0g K | 6g Y | 0g L
+Levrek (taze): 124 kcal | 24g P | 0g K | 2.5g Y | 0g L
+Lüfer (taze): 170 kcal | 22g P | 0g K | 9g Y | 0g L
+Ton balığı (konserve, yağsız): 116 kcal | 26g P | 0g K | 1g Y | 0g L
+Karides: 99 kcal | 24g P | 0g K | 0.3g Y | 0g L
+Midye: 86 kcal | 12g P | 4g K | 2g Y | 0g L
+Sardalya (konserve): 208 kcal | 25g P | 0g K | 11g Y | 0g L
+
+## YUMURTA VE SÜT ÜRÜNLERİ
+Yumurta (büyük boy, 1 adet ~60g): 78 kcal | 6g P | 0.6g K | 5g Y | 0g L
+Beyaz peynir (tam yağlı): 265 kcal | 17g P | 2g K | 21g Y | 0g L
+Kaşar peyniri: 380 kcal | 25g P | 1.5g K | 30g Y | 0g L
+Lor peyniri: 105 kcal | 12g P | 3g K | 5g Y | 0g L
+Süt (tam yağlı): 61 kcal | 3.2g P | 4.8g K | 3.3g Y | 0g L
+Süt (yarım yağlı): 50 kcal | 3.4g P | 5g K | 1.5g Y | 0g L
+Yoğurt (tam yağlı): 61 kcal | 3.5g P | 4.7g K | 3.3g Y | 0g L
+Yoğurt (light): 36 kcal | 3.6g P | 5g K | 0.1g Y | 0g L
+Kefir: 52 kcal | 3.4g P | 4.5g K | 1g Y | 0g L
+Ayran (evde hazır): 29 kcal | 1.9g P | 2.4g K | 1g Y | 0g L
+Tereyağı: 717 kcal | 0.9g P | 0.1g K | 81g Y | 0g L
+
+## BAKLAGİLLER (PİŞMİŞ)
+Mercimek (kırmızı, pişmiş): 116 kcal | 9g P | 20g K | 0.4g Y | 8g L
+Mercimek (yeşil, pişmiş): 116 kcal | 9g P | 20g K | 0.4g Y | 8g L
+Nohut (pişmiş): 164 kcal | 8.9g P | 27g K | 2.6g Y | 7.6g L
+Kuru fasulye (pişmiş): 127 kcal | 9g P | 23g K | 0.5g Y | 6.4g L
+Barbunya (pişmiş): 136 kcal | 9g P | 24g K | 0.5g Y | 6.3g L
+Bakla (pişmiş): 110 kcal | 7.6g P | 20g K | 0.4g Y | 5.4g L
+
+## TAHILLAR VE EKMEK
+Beyaz ekmek (dilim ~30g): 79 kcal | 2.7g P | 15g K | 1g Y | 0.6g L
+Tam buğday ekmeği (dilim ~30g): 69 kcal | 3.6g P | 12g K | 1g Y | 1.9g L
+Çavdar ekmeği (dilim ~30g): 65 kcal | 2.5g P | 12.5g K | 0.8g Y | 1.8g L
+Pirinç (beyaz, pişmiş): 130 kcal | 2.7g P | 28g K | 0.3g Y | 0.4g L
+Bulgur (pişmiş): 83 kcal | 3.1g P | 18.6g K | 0.2g Y | 4.5g L
+Makarna (pişmiş): 131 kcal | 5g P | 25g K | 1.1g Y | 1.8g L
+Yulaf ezmesi (pişmiş): 71 kcal | 2.5g P | 12g K | 1.5g Y | 1.7g L
+Kinoa (pişmiş): 120 kcal | 4.4g P | 22g K | 1.9g Y | 2.8g L
+Mısır (haşlanmış): 96 kcal | 3.4g P | 21g K | 1.5g Y | 2.4g L
+
+## SEBZELER
+Domates: 18 kcal | 0.9g P | 3.9g K | 0.2g Y | 1.2g L
+Salatalık: 15 kcal | 0.7g P | 3.6g K | 0.1g Y | 0.5g L
+Biber (yeşil): 20 kcal | 0.9g P | 4.6g K | 0.2g Y | 1.7g L
+Patlıcan: 25 kcal | 1g P | 6g K | 0.2g Y | 3g L
+Kabak (yeşil): 17 kcal | 1.2g P | 3.1g K | 0.3g Y | 1g L
+Ispanak: 23 kcal | 2.9g P | 3.6g K | 0.4g Y | 2.2g L
+Brokoli: 34 kcal | 2.8g P | 7g K | 0.4g Y | 2.6g L
+Karnabahar: 25 kcal | 1.9g P | 5g K | 0.3g Y | 2g L
+Havuç: 41 kcal | 0.9g P | 10g K | 0.2g Y | 2.8g L
+Patates (haşlanmış): 87 kcal | 1.9g P | 20g K | 0.1g Y | 1.8g L
+Tatlı patates (haşlanmış): 86 kcal | 1.6g P | 20g K | 0.1g Y | 3g L
+Soğan: 40 kcal | 1.1g P | 9.3g K | 0.1g Y | 1.7g L
+Sarımsak: 149 kcal | 6.4g P | 33g K | 0.5g Y | 2.1g L
+Marul: 15 kcal | 1.4g P | 2.9g K | 0.2g Y | 1.3g L
+Maydanoz: 36 kcal | 3g P | 6.3g K | 0.8g Y | 3.3g L
+Taze fasulye: 31 kcal | 1.8g P | 7g K | 0.1g Y | 2.7g L
+Enginar: 47 kcal | 3.3g P | 10.5g K | 0.2g Y | 5.4g L
+
+## MEYVELER
+Elma: 52 kcal | 0.3g P | 14g K | 0.2g Y | 2.4g L
+Muz: 89 kcal | 1.1g P | 23g K | 0.3g Y | 2.6g L
+Portakal: 47 kcal | 0.9g P | 12g K | 0.1g Y | 2.4g L
+Üzüm: 69 kcal | 0.7g P | 18g K | 0.2g Y | 0.9g L
+Karpuz: 30 kcal | 0.6g P | 7.6g K | 0.2g Y | 0.4g L
+Kavun: 34 kcal | 0.8g P | 8.2g K | 0.2g Y | 0.9g L
+İncir (taze): 74 kcal | 0.8g P | 19g K | 0.3g Y | 3g L
+Kayısı (taze): 48 kcal | 1.4g P | 11g K | 0.4g Y | 2g L
+Şeftali: 39 kcal | 0.9g P | 9.5g K | 0.3g Y | 1.5g L
+Kiraz: 63 kcal | 1.1g P | 16g K | 0.2g Y | 2.1g L
+Çilek: 32 kcal | 0.7g P | 7.7g K | 0.3g Y | 2g L
+Nar: 83 kcal | 1.7g P | 19g K | 1.2g Y | 4g L
+Armut: 57 kcal | 0.4g P | 15g K | 0.1g Y | 3.1g L
+
+## KURUYEMIŞLER VE TOHUMLAR
+Badem: 579 kcal | 21g P | 22g K | 50g Y | 12.5g L
+Ceviz: 654 kcal | 15g P | 14g K | 65g Y | 6.7g L
+Fındık: 628 kcal | 15g P | 17g K | 61g Y | 9.7g L
+Fıstık (yer fıstığı): 567 kcal | 26g P | 16g K | 49g Y | 8.5g L
+Ayçiçeği tohumu: 584 kcal | 21g P | 20g K | 51g Y | 8.6g L
+Susam: 573 kcal | 17g P | 23g K | 50g Y | 11.8g L
+Kabak çekirdeği: 559 kcal | 30g P | 11g K | 49g Y | 6g L
+Keten tohumu: 534 kcal | 18g P | 29g K | 42g Y | 27g L
+Chia tohumu: 486 kcal | 17g P | 42g K | 31g Y | 34g L
+
+## YAĞLAR VE SOSLAR
+Zeytinyağı (naturel sızma): 884 kcal | 0g P | 0g K | 100g Y | 0g L
+Ayçiçek yağı: 884 kcal | 0g P | 0g K | 100g Y | 0g L
+Tahin: 595 kcal | 17g P | 21g K | 54g Y | 9g L
+Bal: 304 kcal | 0.3g P | 82g K | 0g Y | 0.2g L
+Pekmez (üzüm): 265 kcal | 1.5g P | 65g K | 0.3g Y | 0.5g L
+
+## TÜRK MUTFAĞI HAZIR YEMEKLERİ (Tahmini, Pişirilmiş)
+Mercimek çorbası (1 kase ~250ml): 130 kcal | 7g P | 22g K | 2g Y | 5g L
+İmam bayıldı (1 porsiyon ~200g): 215 kcal | 3g P | 14g K | 17g Y | 5g L
+Pilav (pirinç, 1 porsiyon ~150g): 195 kcal | 4g P | 42g K | 0.5g Y | 0.6g L
+Bulgur pilavı (1 porsiyon ~150g): 180 kcal | 5g P | 38g K | 1.5g Y | 5g L
+Kuru fasulye (1 porsiyon ~200g): 255 kcal | 13g P | 43g K | 3g Y | 8g L
+Zeytinyağlı enginar (1 porsiyon ~150g): 140 kcal | 3g P | 12g K | 9g Y | 4g L
+Cacık (1 porsiyon ~150g): 65 kcal | 3g P | 4g K | 4g Y | 0.5g L
+Humus (2 yemek kaşığı ~50g): 110 kcal | 4g P | 11g K | 6g Y | 3.5g L
+Börek (peynirli, 1 dilim ~80g): 260 kcal | 9g P | 28g K | 13g Y | 1g L
+Köfte (ızgara, 3 adet ~90g): 220 kcal | 20g P | 5g K | 13g Y | 0.5g L
+Dolma (yaprak, 5 adet ~100g): 160 kcal | 4g P | 22g K | 7g Y | 2g L

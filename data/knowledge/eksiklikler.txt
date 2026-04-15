@@ -1,0 +1,227 @@
+# Türkiye'de Yaygın Besin Eksiklikleri — Semptomlar, Riskler ve Müdahale
+
+## 1. D VİTAMİNİ EKSİKLİĞİ
+**Türkiye Prevalansı:** %60–80 (özellikle kış aylarında ve kapalı giyimde daha yüksek)
+
+### Semptomlar
+Hafif-orta eksiklik:
+- Yorgunluk ve halsizlik (en sık şikayet)
+- Kas ağrıları ve güçsüzlük
+- Kemik ağrıları (özellikle sırt, bacak)
+- Sık hastalık geçirme (bağışıklık zayıflığı)
+- Depresif ruh hali, konsantrasyon güçlüğü
+- Saç dökülmesi
+
+Ciddi eksiklik (<10 ng/mL):
+- Rikets (çocuklarda kemik deformasyonu)
+- Osteomalazi (yetişkinlerde kemik yumuşaması)
+- Ciddi kas zayıflığı
+
+### Risk Faktörleri (Türkiye'ye özgü)
+- Az güneş maruziyeti (kent yaşamı, iç mekan çalışma)
+- Kapalı/örtülü giyim
+- Koyu ten (D vitamini sentezi azalır)
+- Kışın kuzey enlemlerinde yaşam (Türkiye'nin kuzey kesimleri dahil)
+- Obezite (D vitamini yağ dokusunda birikir, dolaşımda azalır)
+- Yaşlılık (cilt sentezi azalır)
+- Süt/süt ürünleri tüketmemek
+
+### Müdahale
+- Takviye: 1000–4000 IU/gün (hekim kontrolünde)
+- Gıda kaynakları: Yağlı balık (somon, sardalya, hamsi), yumurta sarısı, D vitamini eklenmiş süt
+- Güneş: Yaz aylarında sabah 10–14 arası 15-20 dk, kollar ve bacaklar açık
+
+---
+
+## 2. B12 VİTAMİNİ EKSİKLİĞİ
+**Türkiye Prevalansı:** Genel nüfusta %5–15; vejeteryan/veganlarda %50–80+
+
+### Semptomlar
+Erken dönem:
+- Yorgunluk ve enerji düşüklüğü
+- Konsantrasyon güçlüğü, "beyin sisi"
+- Hafıza problemleri
+- Sinirlilik, ruh hali değişkenliği
+- Uyuşma/karıncalanma (el ve ayaklarda)
+
+İleri dönem:
+- Megaloblastik anemi (büyük, işlevsiz kırmızı kan hücreleri)
+- Nörolojik hasar (geri dönüşsüz olabilir)
+- Denge problemleri, yürüme güçlüğü
+- Glossit (dil iltihabı)
+- Sarılık
+
+### Risk Faktörleri (Türkiye'ye özgü)
+- Vejetaryen/vegan beslenme (B12 yalnızca hayvansal kaynaklarda)
+- Yaşlılık (intrinsik faktör azalması → emilim bozukluğu)
+- Çay ile yemek (demir emilimini engeller, B12 emilimini de olumsuz etkiler)
+- Metformin kullanımı (diyabet ilacı, B12 emilimini azaltır)
+- Proton pompa inhibitörü (mide asidi azaltıcı) kullanımı
+- H. pylori enfeksiyonu (mide mukozası hasarı)
+- Mide ameliyatı geçirmiş olmak
+
+### Müdahale
+- Takviye: 500–1000 mcg/gün oral veya 3 ayda 1 B12 enjeksiyonu
+- Gıda kaynakları: Et, balık, tavuk, yumurta, süt ürünleri, midye
+- Vegan için: Takviye zorunludur, gıda ile yeterli alım mümkün değil
+
+---
+
+## 3. DEMİR EKSİKLİĞİ / ANEMİ
+**Türkiye Prevalansı:** Kadınlarda %27–30, çocuklarda %30–40
+
+### Semptomlar
+Hafif eksiklik (ferritin düşük, hemoglobin normal):
+- Yorgunluk, enerji düşüklüğü
+- Konsantrasyon güçlüğü
+- Soğuk intoleransı
+- Bacak huzursuzluğu (restless legs)
+
+Demir eksikliği anemisi (hemoglobin <12 g/dL kadın, <13 g/dL erkek):
+- Ciddi yorgunluk, efor kapasitesi düşüşü
+- Soluk cilt, konjonktivalar
+- Çarpıntı, nefes darlığı
+- Baş dönmesi
+- Pika (kil, buz yeme isteği)
+- Kırılgan tırnaklar, kaşık tırnak
+- Dil yanması
+
+### Risk Faktörleri (Türkiye'ye özgü)
+- Menstruasyonlu kadınlar (en büyük risk grubu)
+- Çay ile yemek (tanik asit demir emilimini %60'a kadar azaltır)
+- Düşük kırmızı et tüketimi
+- Bitkisel demir ağırlıklı beslenme (hem olmayan demir, emilimi daha düşük)
+- Gebelik
+- Ergenlik (hızlı büyüme dönemi)
+- Sık kan bağışı
+
+### Müdahale
+- Takviye: 100–200 mg/gün ferröz sülfat (hekim kontrolünde)
+- C vitamini ile birlikte almak emilimi artırır
+- Çay/kahve ile demir takviyesi almamak
+- Gıda kaynakları: Kırmızı et (en iyi hem demir kaynağı), tavuk, balık, yumurta sarısı, kuru baklagiller, yeşil yapraklı sebzeler, kuru kayısı, pekmez
+
+---
+
+## 4. MAGNEZYUM EKSİKLİĞİ
+**Türkiye Prevalansı:** %20–30 (rafine gıda tüketimi ile ilişkili)
+
+### Semptomlar
+Hafif eksiklik:
+- Kas krampları (özellikle geceleri baldır krampları)
+- Yorgunluk, güçsüzlük
+- Sinirlilik, anksiyete
+- Uyku problemleri
+- Baş ağrısı/migren
+- Kabızlık
+
+Orta-ciddi eksiklik:
+- Kalp ritim bozuklukları (palpitasyon)
+- Kas seğirmeleri (fasikulasyon)
+- Uyuşma/karıncalanma
+- Yüksek tansiyon
+- Hiperglisemi (insülin direnci artışı)
+
+### Risk Faktörleri (Türkiye'ye özgü)
+- Rafine un ürünleri yoğun tüketim (öğütmede magnezyum kaybı %80)
+- Şekerli içecekler tüketimi (magnezyum atılımını artırır)
+- Stres (kortizol magnezyum atılımını artırır)
+- Alkol tüketimi (magnezyum atılımını artırır)
+- Diyabet/prediyabet (insülin direnci ile ilişkili)
+- Diüretik ilaç kullanımı
+
+### Müdahale
+- Takviye: 200–400 mg/gün magnezyum glisinat veya malat (en iyi emilim)
+- Gıda kaynakları: Yeşil yapraklı sebzeler (ıspanak), kabak çekirdeği, badem, ceviz, siyah çikolata, avokado, bulgur, kuru baklagiller
+
+---
+
+## 5. OMEGA-3 YETERSİZLİĞİ
+**Türkiye Prevalansı:** Yüksek (balık tüketimi düşük, Omega-6/3 oranı bozuk)
+
+### Semptomlar
+- Kuru cilt, egzama benzeri görünüm
+- Kırılgan tırnaklar
+- Kuru göz
+- Konsantrasyon güçlüğü
+- Depresif belirtiler
+- Eklem ağrıları
+- Yüksek trigliserid değerleri
+
+### Omega-6/3 Oranı
+- Optimal: 1:1 ile 4:1 arası
+- Türkiye tahmini: 15:1 ile 20:1 (Omega-6 baskın)
+- Sonuç: İnflamasyon artışı, kardiyovasküler risk
+
+### Risk Faktörleri (Türkiye'ye özgü)
+- Düşük balık tüketimi (haftada <2 porsiyon)
+- Ayçiçek yağı dominant kullanım (yüksek Omega-6)
+- Az ceviz/keten tohumu tüketimi
+
+### Müdahale
+- Takviye: 1–3 g/gün EPA+DHA (balık yağı kapsülü)
+- Gıda kaynakları: Hamsi, uskumru, somon, sardalya, ceviz, keten tohumu, chia tohumu
+
+---
+
+## 6. İYOT EKSİKLİĞİ
+**Türkiye Prevalansı:** %30–40 (iyotlu tuz kullanımına rağmen)
+
+### Semptomlar
+- Yorgunluk, enerji düşüklüğü
+- Kilo alma güçlüğü veya kilo verme güçlüğü
+- Tiroid büyümesi (guatr)
+- Hipotiroidizm belirtileri: saç dökülmesi, kabızlık, üşüme
+- Çocuklarda: zihinsel gelişim geriliği (kritik)
+
+### Risk Faktörleri (Türkiye'ye özgü)
+- İç bölgelerde düşük iyot içerikli toprak
+- Az deniz ürünleri tüketimi
+- İyotsuz tuz kullanımı
+- Brassica sebzesi fazla tüketimi (guatrojen etkisi: lahana, brokoli fazla miktarda çiğ tüketim)
+
+### Müdahale
+- İyotlu tuz kullanımı (pişirmeden önce ekle — ısıda iyot uçar)
+- Gıda kaynakları: Deniz ürünleri, süt ürünleri, yumurta
+
+---
+
+## 7. ÇİNKO EKSİKLİĞİ
+**Türkiye Prevalansı:** %10–20 (özellikle düşük hayvansal protein grubunda)
+
+### Semptomlar
+- Bağışıklık zayıflığı (sık hasta olma)
+- Yara iyileşmesinde gecikme
+- Saç dökülmesi
+- Cilt problemleri (akne, iyileşmeyen yaralar)
+- Tat ve koku kaybı
+- Gece körlüğü (şiddetli eksiklikte)
+- Büyüme geriliği (çocuklarda)
+- Erkeklerde testosteron düşüklüğü
+
+### Risk Faktörleri
+- Vejetaryen/vegan beslenme (fitik asit çinko emilimini azaltır)
+- Düşük kırmızı et tüketimi
+- Crohn hastalığı, malabsorbsiyon
+
+### Müdahale
+- Takviye: 15–30 mg/gün çinko glukonat veya pikolinat
+- Gıda kaynakları: Kırmızı et, midye, kabak çekirdeği, susam, kaju
+
+---
+
+## TÜRK MUTFAĞI VE BESİN EMİLİMİNİ ETKİLEYEN ALIŞKANLIKLAR
+
+### Emilimi Azaltan Alışkanlıklar
+1. **Çay ile yemek:** Demir emilimini %60'a kadar, çinko emilimini %20–30 azaltır
+   → Yemekten 1-2 saat sonra çay için
+2. **Kahve ile ilaç/takviye:** Demir ve kalsiyum emilimini azaltır
+3. **Yüksek fitik asit:** Tam tahıl, baklagil fazla tüketimi (çinko, demir, kalsiyum bağlar)
+   → Islama, pişirme fitik asiti azaltır
+4. **Aşırı kalsiyum:** Demir ve magnezyum emilimini rekabetçi şekilde azaltabilir
+
+### Emilimi Artıran Alışkanlıklar
+1. **C vitamini + demir:** Narenciye, domates, biber ile demir kaynaklarını birleştir
+2. **Fermente gıdalar:** Yoğurt, kefir, turşu — bağırsak mikrobiyomunu destekler
+3. **Zeytinyağı:** Yağda eriyen vitaminlerin (A, D, E, K) emilimini artırır
+4. **Islatılmış kuruyemiş/tohum:** Fitik asit azalır, mineral emilimi artar

@@ -1,0 +1,189 @@
+# TÜBER — Türkiye Beslenme Rehberi Referans Değerleri
+
+## Makro Besin Referans Değerleri (Günlük)
+
+### Protein
+- Yetişkin erkek: 0.8–1.0 g/kg/gün (sedanter), 1.6–2.2 g/kg/gün (aktif/sporcu)
+- Yetişkin kadın: 0.8–1.0 g/kg/gün (sedanter), 1.4–2.0 g/kg/gün (aktif/sporcu)
+- Yaşlı (>65 yaş): 1.0–1.2 g/kg/gün (kas korunumu için artırılmış)
+- Hamile: +25 g/gün ek
+- Emziren: +20 g/gün ek
+
+### Karbonhidrat
+- Toplam enerjinin %45–65'i
+- Lif: Erkek 38 g/gün, Kadın 25 g/gün
+- Şeker (eklenen): Toplam enerjinin %10'undan az önerilir
+
+### Yağ
+- Toplam enerjinin %20–35'i
+- Doymuş yağ: %10'dan az
+- Trans yağ: mümkün olduğunca az (<1% enerji)
+- Omega-3: 1.6 g/gün (erkek), 1.1 g/gün (kadın) ALA
+
+## Vitamin Referans Değerleri (Günlük)
+
+### D Vitamini
+- 1-70 yaş: 600 IU (15 mcg)
+- >70 yaş: 800 IU (20 mcg)
+- Türkiye özel not: Nüfusun %60–80'inde D vitamini eksikliği görülmektedir
+- Eksiklik sınırı: <20 ng/mL (50 nmol/L)
+- Yetersizlik: 20–29 ng/mL
+- Yeterli: 30–100 ng/mL
+- Güneş maruziyeti: Yaz aylarında günlük 15–20 dakika kollar açık önerilir
+
+### B12 Vitamini
+- Yetişkin: 2.4 mcg/gün
+- Türkiye özel: Vejeteryan/vegan nüfus ve yaşlılarda ciddi eksiklik riski
+- Serum referans: 200–900 pg/mL
+- Eksiklik: <200 pg/mL
+- Sınır değer: 200–300 pg/mL (semptomlar başlayabilir)
+
+### Folik Asit (B9)
+- Yetişkin: 400 mcg DFE/gün
+- Hamilelik: 600 mcg DFE/gün
+- Emzirme: 500 mcg DFE/gün
+
+### B6 Vitamini
+- 19-50 yaş: 1.3 mg/gün
+- >50 yaş erkek: 1.7 mg/gün
+- >50 yaş kadın: 1.5 mg/gün
+
+### C Vitamini
+- Erkek: 90 mg/gün
+- Kadın: 75 mg/gün
+- Sigara içenler: +35 mg/gün ek
+
+### A Vitamini
+- Erkek: 900 mcg RAE/gün
+- Kadın: 700 mcg RAE/gün
+
+## Mineral Referans Değerleri (Günlük)
+
+### Demir
+- Erkek (19-50 yaş): 8 mg/gün
+- Kadın (19-50 yaş): 18 mg/gün (menstruasyon nedeniyle yüksek)
+- Kadın (>51 yaş): 8 mg/gün
+- Türkiye özel: Kadınlarda demir eksikliği anemisi %27–30 prevalans
+- Serum ferritin referans: Erkek 12–300 ng/mL, Kadın 12–150 ng/mL
+- Düşük ferritin: <12 ng/mL
+
+### Magnezyum
+- Erkek (19-30 yaş): 400 mg/gün
+- Erkek (>31 yaş): 420 mg/gün
+- Kadın (19-30 yaş): 310 mg/gün
+- Kadın (>31 yaş): 320 mg/gün
+- Türkiye özel: Rafine gıda tüketimi nedeniyle eksiklik yaygın
+- Serum referans: 1.7–2.2 mg/dL
+
+### Kalsiyum
+- 19-50 yaş: 1000 mg/gün
+- >51 yaş kadın, >70 yaş erkek: 1200 mg/gün
+- Türkiye özel: Süt ürünü tüketimi düşük olan bölgelerde eksiklik riski
+
+### Çinko
+- Erkek: 11 mg/gün
+- Kadın: 8 mg/gün
+- Türkiye özel: Hayvansal protein tüketimi düşük olanlarda risk
+
+### İyot
+- Yetişkin: 150 mcg/gün
+- Hamile: 220 mcg/gün
+- Emziren: 290 mcg/gün
+- İyotlu tuz kullanımı Türkiye'de yaygınlaştırılmıştır
+
+### Selenyum
+- Erkek: 55 mcg/gün
+- Kadın: 55 mcg/gün
+
+## Enerji Hesaplama Referansları
+
+### BMR Formülleri
+**Mifflin-St Jeor (Önerilen):**
+- Erkek: BMR = (10 × ağırlık kg) + (6.25 × boy cm) − (5 × yaş) + 5
+- Kadın: BMR = (10 × ağırlık kg) + (6.25 × boy cm) − (5 × yaş) − 161
+
+**Harris-Benedict (Klasik):**
+- Erkek: BMR = 88.362 + (13.397 × kg) + (4.799 × cm) − (5.677 × yaş)
+- Kadın: BMR = 447.593 + (9.247 × kg) + (3.098 × cm) − (4.330 × yaş)
+
+### Aktivite Çarpanları (TDEE)
+- Sedanter (hareketsiz): BMR × 1.2
+- Hafif aktif (1-3 gün/hafta egzersiz): BMR × 1.375
+- Orta aktif (3-5 gün/hafta egzersiz): BMR × 1.55
+- Çok aktif (6-7 gün/hafta egzersiz): BMR × 1.725
+- Aşırı aktif (günde iki antrenman, fiziksel iş): BMR × 1.9
+
+### Hedef Bazlı Kalori Ayarı
+- Yağ yakımı: TDEE − 300 ila −500 kcal/gün
+- Yavaş yağ yakımı (kas koruyarak): TDEE − 200 ila −300 kcal/gün
+- Kas kazanımı: TDEE + 200 ila +400 kcal/gün
+- Genel sağlık: TDEE ± 0 (idame)
+
+## Vücut Kompozisyonu Referans Değerleri
+
+### Vücut Yağ Oranı (%)
+**Erkek:**
+- Esansiyel yağ: 2–5%
+- Sporcu: 6–13%
+- Fit: 14–17%
+- Kabul edilebilir: 18–24%
+- Obez: >25%
+
+**Kadın:**
+- Esansiyel yağ: 10–13%
+- Sporcu: 14–20%
+- Fit: 21–24%
+- Kabul edilebilir: 25–31%
+- Obez: >32%
+
+### BMI Sınıflandırması (WHO/Türkiye Sağlık Bakanlığı)
+- Zayıf: <18.5
+- Normal: 18.5–24.9
+- Fazla kilolu: 25.0–29.9
+- Obez I: 30.0–34.9
+- Obez II: 35.0–39.9
+- Morbid obez: ≥40.0
+
+### Bel Çevresi Riski (Türkiye/WHO)
+**Erkek:**
+- Normal: <94 cm
+- Artmış risk: 94–102 cm
+- Yüksek risk: >102 cm
+
+**Kadın:**
+- Normal: <80 cm
+- Artmış risk: 80–88 cm
+- Yüksek risk: >88 cm
+
+### Viseral Yağ Skoru (Tanita)
+- 1–9: Normal
+- 10–14: Yüksek (metabolik risk başlangıcı)
+- 15+: Çok yüksek (tıbbi değerlendirme önerilir)
+
+### Bazal Metabolizma Hızı (BMR) Tanita Referansı
+Değerler yaş, cinsiyet ve vücut kompozisyonuna göre değişir:
+- Genellikle Mifflin-St Jeor ile ±10% sapma normaldir
+- Tanita BMR'ı biyoempedans ile hesaplar, açlık durumu ve hidrasyon etkiler
+
+## Türkiye'ye Özgü Beslenme Sorunları
+
+### Yaygın Eksiklikler
+1. D Vitamini — %60-80 nüfus eksik; güneş maruziyeti yetersizliği, kapalı giyim
+2. B12 — Vejeteryan/vegan artışı, yaşlı nüfus, gastrik problemler
+3. Demir — Özellikle kadınlarda; çay ile birlikte yemek tüketimi emilimi azaltır
+4. Magnezyum — Rafine un ve şeker tüketimi yüksek, yeşil yapraklı sebze düşük
+5. İyot — Kıyı dışı bölgeler; iyotlu tuz kullanımına rağmen yetersizlik var
+6. Omega-3 — Balık tüketimi düşük, zeytinyağı tüketimi yüksek ama Omega-6/3 oranı bozuk
+7. Çinko — Kırmızı et tüketimi düşük bölgelerde risk
+
+### Aşırı Tüketim Sorunları
+- Tuz: Ortalama 9–10 g/gün (önerilen <5 g/gün) — hipertansiyon riski
+- Rafine karbonhidrat: Ekmek, beyaz pirinç, şeker yoğun tüketim
+- Trans yağ: Endüstriyel gıdalarda hâlâ yüksek
+
+### Türk Mutfağının Güçlü Yönleri
+- Zeytinyağı kullanımı (özellikle Ege bölgesi)
+- Baklagil tüketimi (mercimek, nohut, kuru fasulye) — bitkisel protein
+- Taze sebze-meyve çeşitliliği
+- Yoğurt ve fermente süt ürünleri (probiyotik)
+- Sumak, kekik, pul biber — antioksidan yüksek baharatlar
