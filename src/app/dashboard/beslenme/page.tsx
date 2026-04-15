@@ -9,7 +9,7 @@ import FinalRapor from "./components/FinalRapor";
 
 type GirisTipi = "tanita" | "manuel" | null;
 type Hedef = "yag_yakimi" | "kas_kazanimi" | "enerji_performans" | "genel_saglik" | null;
-type Adim = 1 | 2 | 3 | 4;
+type Adim = 1 | 2 | 3;
 
 interface TanitaOlcum {
   vucutYagOrani: string;
@@ -133,9 +133,8 @@ const S = {
 function AdimGostergesi({ aktif }: { aktif: Adim }) {
   const adimlar = [
     { no: 1, label: "Ölçümler" },
-    { no: 2, label: "Analiz" },
-    { no: 3, label: "Anamnez" },
-    { no: 4, label: "Rapor" },
+    { no: 2, label: "Anamnez" },
+    { no: 3, label: "Rapor" },
   ];
   return (
     <div style={{ display: "flex", alignItems: "center", gap: 0, marginBottom: 40 }}>
@@ -187,69 +186,22 @@ export default function BeslenmePage() {
   });
   const [yukleniyor, setYukleniyor] = useState(false);
   const [hata, setHata] = useState<string | null>(null);
-  const [analizSonucu, setAnalizSonucu] = useState<Record<string, unknown> | null>(null);
-  const [anamnezFormu, setAnamnezFormu] = useState<Record<string, unknown> | null>(null);
-  const [finalRapor, setFinalRapor] = useState<Record<string, unknown> | null>(null);
+  const [rapor, setRapor] = useState<Record<string, unknown> | null>(null);
 
-  async function analizYap() {
-    if (!hedef) return;
+  async function raporOlustur(anamnezCevaplari: Record<string, string>) {
     setYukleniyor(true);
     setHata(null);
     try {
       const olcumler = girisTipi === "tanita" ? { tip: "tanita", ...tanitaOlcum } : { tip: "manuel", ...manuelOlcum };
-      const res = await fetch("/api/beslenme/analiz", {
+      const res = await fetch("/api/beslenme/rapor", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ olcumler, hedef }),
-      });
-      const data = await res.json();
-      if (!res.ok) { setHata(data.detail || data.error || "Analiz yapılamadı. Tekrar dene."); return; }
-      setAnalizSonucu(data);
-      setAdim(2);
-    } catch (e) {
-      setHata("Bağlantı hatası. Tekrar dene.");
-      console.error(e);
-    } finally {
-      setYukleniyor(false);
-    }
-  }
-
-  async function anamnezOlustur() {
-    setYukleniyor(true);
-    setHata(null);
-    try {
-      const res = await fetch("/api/beslenme/anamnez", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ analizSonucu, hedef }),
-      });
-      const data = await res.json();
-      if (!res.ok) { setHata(data.detail || data.error || "Form oluşturulamadı. Tekrar dene."); return; }
-      if (!data.kategoriler || data.kategoriler.length === 0) { setHata("Form verisi boş geldi. Tekrar dene."); return; }
-      setAnamnezFormu(data);
-      setAdim(3);
-    } catch (e) {
-      setHata("Bağlantı hatası. Tekrar dene.");
-      console.error(e);
-    } finally {
-      setYukleniyor(false);
-    }
-  }
-
-  async function finalDegerlendirme(cevaplar: Record<string, string>) {
-    setYukleniyor(true);
-    setHata(null);
-    try {
-      const olcumler = girisTipi === "tanita" ? { tip: "tanita", ...tanitaOlcum } : { tip: "manuel", ...manuelOlcum };
-      const res = await fetch("/api/beslenme/degerlendirme", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ olcumler, analizSonucu, anamnezCevaplari: cevaplar, hedef }),
+        body: JSON.stringify({ olcumler, anamnezCevaplari, hedef }),
       });
       const data = await res.json();
       if (!res.ok) { setHata(data.detail || data.error || "Rapor oluşturulamadı. Tekrar dene."); return; }
-      setFinalRapor(data);
-      setAdim(4);
+      setRapor(data);
+      setAdim(3);
     } catch (e) {
       setHata("Bağlantı hatası. Tekrar dene.");
       console.error(e);
@@ -490,52 +442,46 @@ export default function BeslenmePage() {
               )}
             </div>
 
-            {/* Analiz Butonu */}
+            {/* İlerle Butonu */}
             <div style={{ display: "flex", justifyContent: "flex-end" }}>
               <button
-                onClick={analizYap}
-                disabled={!canProceed || yukleniyor}
+                onClick={() => setAdim(2)}
+                disabled={!canProceed}
                 style={{
                   ...S.btn,
-                  opacity: canProceed && !yukleniyor ? 1 : 0.4,
-                  cursor: canProceed && !yukleniyor ? "pointer" : "not-allowed",
-                  display: "flex", alignItems: "center", gap: 8, fontSize: 15,
+                  opacity: canProceed ? 1 : 0.4,
+                  cursor: canProceed ? "pointer" : "not-allowed",
+                  fontSize: 15,
                 }}
               >
-                {yukleniyor ? (
-                  <>
-                    <span style={{ display: "inline-block", width: 16, height: 16, border: "2px solid rgba(255,255,255,0.3)", borderTopColor: "#fff", borderRadius: "50%", animation: "spin 0.8s linear infinite" }} />
-                    Analiz yapılıyor...
-                  </>
-                ) : (
-                  "Analiz Yap →"
-                )}
+                Devam Et →
               </button>
             </div>
           </div>
         )}
 
-        {/* ADIM 2 */}
-        {adim === 2 && analizSonucu && (
-          <AnalizSonucu
-            sonuc={analizSonucu}
-            yukleniyor={yukleniyor}
-            onDevam={anamnezOlustur}
-          />
-        )}
-
-        {/* ADIM 3 */}
-        {adim === 3 && anamnezFormu && (
+        {/* ADIM 2 — Anamnez */}
+        {adim === 2 && (
           <AnamnezForm
-            form={anamnezFormu}
             yukleniyor={yukleniyor}
-            onGonder={finalDegerlendirme}
+            onGonder={raporOlustur}
           />
         )}
 
-        {/* ADIM 4 */}
-        {adim === 4 && finalRapor && (
-          <FinalRapor rapor={finalRapor} />
+        {/* ADIM 3 — Rapor */}
+        {adim === 3 && rapor && (
+          <>
+            {rapor.analiz && (
+              <AnalizSonucu
+                sonuc={rapor.analiz as Parameters<typeof AnalizSonucu>[0]["sonuc"]}
+                yukleniyor={false}
+                onDevam={() => {}}
+                sadeceBilgi
+              />
+            )}
+            <div style={{ height: 1, background: "#E2E8F0", margin: "24px 0" }} />
+            <FinalRapor rapor={rapor.rapor as Parameters<typeof FinalRapor>[0]["rapor"]} />
+          </>
         )}
       </div>
 

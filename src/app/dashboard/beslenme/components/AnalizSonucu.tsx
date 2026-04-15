@@ -19,6 +19,7 @@ interface AnalizSonucProps {
   };
   yukleniyor: boolean;
   onDevam: () => void;
+  sadeceBilgi?: boolean;
 }
 
 const DURUM = {
@@ -96,7 +97,7 @@ function DegerKart({ d, index }: { d: Deger; index: number }) {
   );
 }
 
-export default function AnalizSonucu({ sonuc, yukleniyor, onDevam }: AnalizSonucProps) {
+export default function AnalizSonucu({ sonuc, yukleniyor, onDevam, sadeceBilgi }: AnalizSonucProps) {
   const [headerVisible, setHeaderVisible] = useState(false);
   const normalSayisi = sonuc.degerler?.filter(d => d.durum === "normal").length || 0;
   const dikkatSayisi = sonuc.degerler?.filter(d => d.durum === "dikkat").length || 0;
@@ -192,28 +193,30 @@ export default function AnalizSonucu({ sonuc, yukleniyor, onDevam }: AnalizSonuc
         )}
       </div>
 
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <p style={{ fontSize: 13, color: "#64748B", margin: 0 }}>
-          Sonraki adımda sana özel anamnez formu oluşturulacak.
-        </p>
-        <button
-          onClick={onDevam}
-          disabled={yukleniyor}
-          style={{
-            background: "#0D9488", color: "#fff", border: "none", borderRadius: 10,
-            padding: "13px 28px", fontSize: 14, fontWeight: 600,
-            cursor: yukleniyor ? "not-allowed" : "pointer", fontFamily: "inherit",
-            opacity: yukleniyor ? 0.6 : 1, display: "flex", alignItems: "center", gap: 8,
-          }}
-        >
-          {yukleniyor ? (
-            <>
-              <span style={{ display: "inline-block", width: 16, height: 16, border: "2px solid rgba(255,255,255,0.3)", borderTopColor: "#fff", borderRadius: "50%", animation: "spin 0.8s linear infinite" }} />
-              Form oluşturuluyor...
-            </>
-          ) : "Anamnez Formuna Geç →"}
-        </button>
-      </div>
+      {!sadeceBilgi && (
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <p style={{ fontSize: 13, color: "#64748B", margin: 0 }}>
+            Sonraki adımda sana özel anamnez formu oluşturulacak.
+          </p>
+          <button
+            onClick={onDevam}
+            disabled={yukleniyor}
+            style={{
+              background: "#0D9488", color: "#fff", border: "none", borderRadius: 10,
+              padding: "13px 28px", fontSize: 14, fontWeight: 600,
+              cursor: yukleniyor ? "not-allowed" : "pointer", fontFamily: "inherit",
+              opacity: yukleniyor ? 0.6 : 1, display: "flex", alignItems: "center", gap: 8,
+            }}
+          >
+            {yukleniyor ? (
+              <>
+                <span style={{ display: "inline-block", width: 16, height: 16, border: "2px solid rgba(255,255,255,0.3)", borderTopColor: "#fff", borderRadius: "50%", animation: "spin 0.8s linear infinite" }} />
+                Form oluşturuluyor...
+              </>
+            ) : "Anamnez Formuna Geç →"}
+          </button>
+        </div>
+      )}
 
       <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
     </div>
